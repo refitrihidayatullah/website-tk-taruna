@@ -52,7 +52,7 @@
                             <tbody>
                                 <?php foreach ($tampil_info as $info) { ?>
                                     <tr>
-                                        <th scope="row"><?= $info['informasi'];  ?></th>
+                                        <td scope="row"><?= $info['informasi'];  ?></td>
                                         <td><button type="button" data-toggle="modal" data-target="#ubah_info<?= $info['id_info']; ?>" class="btn btn-outline-info btn-rounded"><i class="far fa-edit"></i></button></td>
 
                                         <td><a href="<?= base_url(); ?>AdminProfile/delete_info/<?= $info['id_info']; ?>"><button type="button" class="btn btn-outline-info btn-rounded"><i class="fas fa-trash"></i></button></a></td>

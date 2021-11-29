@@ -43,11 +43,12 @@ class AdminProfile extends CI_Controller
     public function ubah($id)
     {
         $data['tampilall'] = $this->m_admin_profile->getDataByid($id);
+        $data['halaman'] = "ubah data";
         $this->form_validation->set_rules('judul_profile', 'Judul content', 'required');
         $this->form_validation->set_rules('deskripsi_profile', 'Deskripsi content', 'required');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('backend/header');
+            $this->load->view('backend/header', $data);
             $this->load->view('admin/profile/v_ubah_profile', $data);
             $this->load->view('backend/footer');
         } else {
